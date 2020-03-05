@@ -1,5 +1,6 @@
 # 3D_VEPC_CS_SR
 ## Compressed Sensing 3D Strain / Strain Rate Framework
+[![DOI](https://zenodo.org/badge/245132989.svg)](https://zenodo.org/badge/latestdoi/245132989)
 
 <p align="center">
   <img width="458" height="433" src=/image/preview.png>
