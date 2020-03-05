@@ -1,0 +1,14 @@
+# 3D_VEPC_CS_SR
+## Compressed Sensing 3D Strain / Strain Rate Framework
+
+<p align="center">
+  <img width="458" height="433" src=/image/preview.png>
+</p>
+
+
+This is the set of codes used to process undersampled Velocity Encoded Phase-Contrast images.
+The description of the analysis is given in the following paper:
+
+- [Malis, V, Sinha, U, Sinha, S. Compressed sensing velocity encoded phase contrast imaging: Monitoring skeletal muscle kinematics. Magn Reson Med. 2019; 00: 1– 15. https://doi.org/10.1002/mrm.28100](https://onlinelibrary.wiley.com/doi/10.1002/mrm.28100)
+
+[![DOI](https://zenodo.org/badge/168612885.svg)](https://zenodo.org/badge/latestdoi/168612885)
