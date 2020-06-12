@@ -1,5 +1,5 @@
 
-function struct=strain_tensor_calcs(vx,VX,vy,VY,vz,VZ,xs,ys,zs,pixelspacing,trigger)
+function struct=strain_tensor_calcs_v2(vx,VX,vy,VY,vz,VZ,xs,ys,zs,pixelspacing,trigger)
 
 clc
 

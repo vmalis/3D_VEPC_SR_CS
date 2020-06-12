@@ -36,7 +36,7 @@ strain_plot(v,sd,'$v_{z} \quad [\mathrm{cm/s}]$','vz',limits,dt);
 
 
 % euler strain
-limits=[-5, 5];
+limits=[-1, 1];
 v=cat(2,struct(1).E_lambda(:,1), struct(2).E_lambda(:,1), struct(3).E_lambda(:,1));
 sd=cat(2,struct(1).E_lambda_sd(:,1), struct(2).E_lambda_sd(:,1), struct(3).E_lambda_sd(:,1));
 strain_plot(v,sd,'$E_{\lambda_{1}} \quad [\mathrm{mm/mm}]$','E1',limits,dt);
@@ -58,7 +58,7 @@ sd=cat(2,struct(1).E_Volumetric_sd, struct(2).E_Volumetric_sd, struct(3).E_Volum
 strain_plot(v,sd,'$E_{vol} \quad [\mathrm{mm^3/mm^3}]$','EV',limits,dt);
 
 % lagrangian strain
-limits=[-5, 5];
+limits=[-1, 1];
 v=cat(2,struct(1).L_lambda(:,1), struct(2).L_lambda(:,1), struct(3).L_lambda(:,1));
 sd=cat(2,struct(1).L_lambda_sd(:,1), struct(2).L_lambda_sd(:,1), struct(3).L_lambda_sd(:,1));
 strain_plot(v,sd,'$L_{\lambda_{1}} \quad [\mathrm{mm/mm}]$','L1',limits,dt);
@@ -80,52 +80,52 @@ sd=cat(2,struct(1).L_Volumetric_sd, struct(2).L_Volumetric_sd, struct(3).L_Volum
 strain_plot(v,sd,'$L_{vol} \quad [\mathrm{mm^3/mm^3}]$','LV',limits,dt);
 
 % euler strain rate
-limits=[-4500,4500];
+limits=[-2000,2000];
 v=cat(2,struct(1).SR_E_lambda(:,1), struct(2).SR_E_lambda(:,1), struct(3).SR_E_lambda(:,1));
 sd=cat(2,struct(1).SR_E_lambda_sd(:,1), struct(2).SR_E_lambda_sd(:,1), struct(3).SR_E_lambda_sd(:,1));
-strain_plot(v,sd,'$SR_{\lambda_{1}} \quad \times 10^3 \, [\mathrm{s^{-1}}]$','SRE1',limits,dt);
+strain_plot(v,sd,'$SR_{\lambda_{1}} \quad [\mathrm{m s^{-1}}]$','SRE1',limits,dt);
 
 v=cat(2,struct(1).SR_E_lambda(:,2), struct(2).SR_E_lambda(:,2), struct(3).SR_E_lambda(:,2));
 sd=cat(2,struct(1).SR_E_lambda_sd(:,2), struct(2).SR_E_lambda_sd(:,2), struct(3).SR_E_lambda_sd(:,2));
-strain_plot(v,sd,'$SR_{\lambda_{2}} \quad \times 10^3 \, [\mathrm{s^{-1}}]$','SRE2',limits,dt);
+strain_plot(v,sd,'$SR_{\lambda_{2}} \quad [\mathrm{m s^{-1}}]$','SRE2',limits,dt);
 
 v=cat(2,struct(1).SR_E_lambda(:,3), struct(2).SR_E_lambda(:,3), struct(3).SR_E_lambda(:,3));
 sd=cat(2,struct(1).SR_E_lambda_sd(:,3), struct(2).SR_E_lambda_sd(:,3), struct(3).SR_E_lambda_sd(:,3));
-strain_plot(v,sd,'$SR_{\lambda_{3}} \quad \times 10^3 \, [\mathrm{s^{-1}}]$','SRE3',limits,dt);
+strain_plot(v,sd,'$SR_{\lambda_{3}} \quad [\mathrm{m s^{-1}}]$','SRE3',limits,dt);
 
-limits=[-5000, 5000];
+limits=[-2000, 2000];
 v=cat(2,struct(1).ShearSR_E_max, struct(2).ShearSR_E_max, struct(3).ShearSR_E_max);
 sd=cat(2,struct(1).ShearSR_E_max_sd(:,1), struct(2).ShearSR_E_max_sd(:,1), struct(3).ShearSR_E_max_sd(:,1));
-strain_plot(v,sd,'$SR_{max} \quad \times 10^3 \, [\mathrm{s^{-1}}]$','SREmax',limits,dt);
+strain_plot(v,sd,'$SR_{max} \quad [\mathrm{m s^{-1}}]$','SREmax',limits,dt);
 
 
 % lagrangian strain rate Lagrangian
-limits=[-4500,4500];
+limits=[-2000,2000];
 
 v=cat(2,struct(1).SR_lambda(:,1), struct(2).SR_lambda(:,1), struct(3).SR_lambda(:,1));
 sd=cat(2,struct(1).SR_lambda_sd(:,1), struct(2).SR_lambda_sd(:,1), struct(3).SR_lambda_sd(:,1));
-strain_plot(v,sd,'$SR_{\lambda_{1}} \quad \times 10^3 \, [\mathrm{s^{-1}}]$','SR1',limits,dt);
+strain_plot(v,sd,'$SR_{\lambda_{1}} \quad [\mathrm{m s^{-1}}]$','SR1',limits,dt);
 
 v=cat(2,struct(1).SR_lambda(:,2), struct(2).SR_lambda(:,2), struct(3).SR_lambda(:,2));
 sd=cat(2,struct(1).SR_lambda_sd(:,2), struct(2).SR_lambda_sd(:,2), struct(3).SR_lambda_sd(:,2));
-strain_plot(v,sd,'$SR_{\lambda_{2}} \quad \times 10^3 \, [\mathrm{s^{-1}}]$','SR2',limits,dt);
+strain_plot(v,sd,'$SR_{\lambda_{2}} \quad [\mathrm{m s^{-1}}]$','SR2',limits,dt);
 
 v=cat(2,struct(1).SR_lambda(:,3), struct(2).SR_lambda(:,3), struct(3).SR_lambda(:,3));
 sd=cat(2,struct(1).SR_lambda_sd(:,3), struct(2).SR_lambda_sd(:,3), struct(3).SR_lambda_sd(:,3));
-strain_plot(v,sd,'$SR_{\lambda_{3}} \quad \times 10^3 \, [\mathrm{s^{-1}}]$','SR3',limits,dt);
+strain_plot(v,sd,'$SR_{\lambda_{3}} \quad [\mathrm{m s^{-1}}]$','SR3',limits,dt);
 
 
-limits=[-5000, 5000];
+limits=[-3000, 3000];
 v=cat(2,struct(1).ShearSR_max, struct(2).ShearSR_max, struct(3).ShearSR_max);
 sd=cat(2,struct(1).ShearSR_max_sd(:,1), struct(2).ShearSR_max_sd(:,1), struct(3).ShearSR_max_sd(:,1));
-strain_plot(v,sd,'$SR_{max} \quad \times 10^3 \, [\mathrm{s^{-1}}]$','SRmax',limits,dt);
+strain_plot(v,sd,'$SR_{max} \quad [\mathrm{m s^{-1}}]$','SRmax',limits,dt);
 
 
 
 %%% fiber aligned
 
 % euler strain
-limits=[-3, 3];
+limits=[-1, 1];
 
 v=cat(2,struct(1).ED(:,1,1), struct(2).ED(:,1,1), struct(3).ED(:,1,1));
 sd=cat(2,struct(1).ED_sd(:,1,1), struct(2).ED_sd(:,1,1), struct(3).ED_sd(:,1,1));
@@ -180,57 +180,57 @@ strain_plot(v,sd,'$L_{st} \quad [\mathrm{mm/mm}]$','Lst',limits,dt);
 
 
 % lagrangian strain rate
-limits=[-4500, 4500];
+limits=[-2000, 2000];
 v=cat(2,struct(1).SRD(:,1,1), struct(2).SRD(:,1,1), struct(3).SRD(:,1,1));
 sd=cat(2,struct(1).SRD_sd(:,1,1), struct(2).SRD_sd(:,1,1), struct(3).SRD_sd(:,1,1));
-strain_plot(v,sd,'$SR_{ff} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRff',limits,dt);
+strain_plot(v,sd,'$SR_{ff} \quad [\mathrm{m s^{-1}}]$','SRff',limits,dt);
 
 v=cat(2,struct(1).SRD(:,2,2), struct(2).SRD(:,2,2), struct(3).SRD(:,2,2));
 sd=cat(2,struct(1).SRD_sd(:,1,1), struct(2).SRD_sd(:,1,1), struct(3).SRD_sd(:,1,1));
-strain_plot(v,sd,'$SR_{ss} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRss',limits,dt);
+strain_plot(v,sd,'$SR_{ss} \quad [\mathrm{m s^{-1}}]$','SRss',limits,dt);
 
 v=cat(2,struct(1).SRD(:,3,3), struct(2).SRD(:,3,3), struct(3).SRD(:,3,3));
 sd=cat(2,struct(1).SRD_sd(:,3,3), struct(2).SRD_sd(:,3,3), struct(3).SRD_sd(:,3,3));
-strain_plot(v,sd,'$SR_{tt} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRtt',limits,dt);
+strain_plot(v,sd,'$SR_{tt} \quad [\mathrm{m s^{-1}}]$','SRtt',limits,dt);
 
 v=cat(2,struct(1).SRD(:,1,2), struct(2).SRD(:,1,2), struct(3).SRD(:,1,2));
 sd=cat(2,struct(1).SRD_sd(:,1,2), struct(2).SRD_sd(:,1,2), struct(3).SRD_sd(:,1,2));
-strain_plot(v,sd,'$SR_{fs} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRfs',limits,dt);
+strain_plot(v,sd,'$SR_{fs} \quad [\mathrm{m s^{-1}}]$','SRfs',limits,dt);
 
 v=cat(2,struct(1).SRD(:,1,3), struct(2).SRD(:,1,3), struct(3).SRD(:,1,3));
 sd=cat(2,struct(1).SRD_sd(:,1,3), struct(2).SRD_sd(:,1,3), struct(3).SRD_sd(:,1,3));
-strain_plot(v,sd,'$SR_{ft} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRft',limits,dt);
+strain_plot(v,sd,'$SR_{ft} \quad [\mathrm{m s^{-1}}]$','SRft',limits,dt);
 
 v=cat(2,struct(1).SRD(:,2,3), struct(2).SRD(:,2,3), struct(3).SRD(:,2,3));
 sd=cat(2,struct(1).SRD_sd(:,2,3), struct(2).SRD_sd(:,2,3), struct(3).SRD_sd(:,2,3));
-strain_plot(v,sd,'$SR_{st} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRst',limits,dt);
+strain_plot(v,sd,'$SR_{st} \quad [\mathrm{m s^{-1}}]$','SRst',limits,dt);
 
 
 % euler strain rate
-limits=[-4500, 4500];
+limits=[-2000, 2000];
 v=cat(2,struct(1).SRD_E(:,1,1), struct(2).SRD_E(:,1,1), struct(3).SRD_E(:,1,1));
 sd=cat(2,struct(1).SRD_E_sd(:,1,1), struct(2).SRD_E_sd(:,1,1), struct(3).SRD_E_sd(:,1,1));
-strain_plot(v,sd,'$SR_{ff} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRff',limits,dt);
+strain_plot(v,sd,'$SR_{ff} \quad [\mathrm{m s^{-1}}]$','SRff',limits,dt);
 
 v=cat(2,struct(1).SRD_E(:,2,2), struct(2).SRD_E(:,2,2), struct(3).SRD_E(:,2,2));
 sd=cat(2,struct(1).SRD_E_sd(:,1,1), struct(2).SRD_E_sd(:,1,1), struct(3).SRD_E_sd(:,1,1));
-strain_plot(v,sd,'$SR_{ss} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRss',limits,dt);
+strain_plot(v,sd,'$SR_{ss} \quad [\mathrm{m s^{-1}}]$','SRss',limits,dt);
 
 v=cat(2,struct(1).SRD_E(:,3,3), struct(2).SRD_E(:,3,3), struct(3).SRD_E(:,3,3));
 sd=cat(2,struct(1).SRD_E_sd(:,3,3), struct(2).SRD_E_sd(:,3,3), struct(3).SRD_E_sd(:,3,3));
-strain_plot(v,sd,'$SR_{tt} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRtt',limits,dt);
+strain_plot(v,sd,'$SR_{tt} \quad [\mathrm{m s^{-1}}]$','SRtt',limits,dt);
 
 v=cat(2,struct(1).SRD_E(:,1,2), struct(2).SRD_E(:,1,2), struct(3).SRD_E(:,1,2));
 sd=cat(2,struct(1).SRD_E_sd(:,1,2), struct(2).SRD_E_sd(:,1,2), struct(3).SRD_E_sd(:,1,2));
-strain_plot(v,sd,'$SR_{fs} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRfs',limits,dt);
+strain_plot(v,sd,'$SR_{fs} \quad [\mathrm{m s^{-1}}]$','SRfs',limits,dt);
 
 v=cat(2,struct(1).SRD_E(:,1,3), struct(2).SRD_E(:,1,3), struct(3).SRD_E(:,1,3));
 sd=cat(2,struct(1).SRD_E_sd(:,1,3), struct(2).SRD_E_sd(:,1,3), struct(3).SRD_E_sd(:,1,3));
-strain_plot(v,sd,'$SR_{ft} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRft',limits,dt);
+strain_plot(v,sd,'$SR_{ft} \quad [\mathrm{m s^{-1}}]$','SRft',limits,dt);
 
 v=cat(2,struct(1).SRD_E(:,2,3), struct(2).SRD_E(:,2,3), struct(3).SRD_E(:,2,3));
 sd=cat(2,struct(1).SRD_E_sd(:,2,3), struct(2).SRD_E_sd(:,2,3), struct(3).SRD_E_sd(:,2,3));
-strain_plot(v,sd,'$SR_{st} \quad [\times 10^3 \, \mathrm{s^{-1}}]$','SRst',limits,dt);
+strain_plot(v,sd,'$SR_{st} \quad [\mathrm{m s^{-1}}]$','SRst',limits,dt);
 
 cd ..
 
