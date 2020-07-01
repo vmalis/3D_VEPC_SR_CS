@@ -470,9 +470,9 @@ clearvars -except SOL_peak SOL_peak_norm GM_peak GM_peak_norm GM GM_SD SOL SOL_S
 % in here just grab a structure/structure and do anova
 %
 % % the results are represented as following
-% 
-% GM_ANOVA  = anovaCSStrain(GM_peak);
-% SOL_ANOVA = anovaCSStrain(SOL_peak);
+
+GM_ANOVA  = anovaCSStrain(GM_peak);
+SOL_ANOVA = anovaCSStrain(SOL_peak);
 
 
 
