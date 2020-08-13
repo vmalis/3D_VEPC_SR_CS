@@ -14,7 +14,7 @@ The description of the analysis is given in the following paper:
 
 
 
-Test data set is included and consists of: \n
-      – raw undersampled k-Space data \n
-      – force recordings  \n
-      – complete set of analyzed images \n
+Test data set is included and consists of:
+  -raw undersampled k-Space data
+  -force recordings  
+  -complete set of analyzed images 
