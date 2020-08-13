@@ -15,6 +15,6 @@ The description of the analysis is given in the following paper:
 
 
 Test data set is included and consists of:
--raw undersampled k-Space data
--force recordings  
--complete set of analyzed images 
+[x] raw undersampled k-Space data
+[x] force recordings  
+[x] complete set of analyzed images 
