@@ -11,3 +11,9 @@ This is the set of codes used to process undersampled Velocity Encoded Phase-Con
 The description of the analysis is given in the following paper:
 
 - [Malis, V, Sinha, U, Sinha, S. Compressed sensing velocity encoded phase contrast imaging: Monitoring skeletal muscle kinematics. Magn Reson Med. 2019; 00: 1– 15. https://doi.org/10.1002/mrm.28100](https://onlinelibrary.wiley.com/doi/10.1002/mrm.28100)
+
+
+Test data set is included and consists of:<br/>
+  [x] raw undersampled k-Space data<br/>
+  [x] force recordings<br/>
+  [x] complete set of analyzed images<br/>
