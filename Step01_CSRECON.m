@@ -206,9 +206,6 @@ for m=1:p
     Data_phase = angle(data);
     [v_x,v_y,v_z]=vepc_calc(Data_phase,Data_magnitude);
     
-    v_x=cat(3,v_x(:,:,1)/6,v_x(:,:,1)/2,v_x);
-    v_y=cat(3,v_y(:,:,1)/6,v_y(:,:,1)/2,v_y);
-    v_z=cat(3,v_z(:,:,1)/6,v_z(:,:,1)/2,v_z);
     Data_magnitude=cat(3,Data_magnitude(:,:,1:2),Data_magnitude);
     
     data=cat(4,v_x,v_y,v_z,Data_magnitude);
