@@ -1,8 +1,5 @@
-%=========================================
-%   Step4 for 3d Strain Rate Analysis
-%=========================================
-%
-% Final scipt to extract peak values and rotate SR to DTI
+%_____________________________________________________
+% Subroutine to perform SR to DTI rotation
 %_____________________________________________________
 % written by Vadim Malis
 % 10/17 at UCSD RIL
@@ -22,11 +19,9 @@ tt=size(tensor_to_rotate,4);
             for k=1:kk
                 for t=1:tt
                                         
-                    R=squeeze(rotation_matrix(i,j,k,:,:));
-                    Q=[R(:,3),R(:,2),R(:,1)];
-                    SR_D(i,j,k,t,:,:)=Q*...
-                                squeeze(tensor_to_rotate(i,j,k,t,:,:))*...
-                                Q';
+                    R = squeeze(rotation_matrix(i,j,k,:,:));
+                    Q = flip(squeeze(tensor_to_rotate(i,j,k,t,:,:)),2);
+                    SR_D(i,j,k,t,:,:)=R*Q*R';
 
                      end
                     

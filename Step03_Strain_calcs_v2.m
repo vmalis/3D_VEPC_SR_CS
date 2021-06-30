@@ -97,6 +97,8 @@ for volume=1:size(unique({Recon.MVC}),2)
          
     end
     
+    Data(1).vx = Recon(j).Vx_SM
+    
     Data(volume).vx(:,:,5,:)=[];
     Data(volume).vx(:,:,1,:)=[];
     Data(volume).vx_sm(:,:,5,:)=[];
