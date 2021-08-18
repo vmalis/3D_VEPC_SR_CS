@@ -189,7 +189,7 @@ VR=XS;
         yi
           for xi=1:256
               
-              for zi=1:3
+              for zi=1
               
                 [xs,ys,zs,vx,vy,vz,vr]=track3dv2(x(yi,xi,zi),y(yi,xi,zi),z(yi,xi,zi),Data(series).vx_sm,Data(series).vz_sm,Data(series).vy_sm,trigger,pixelspacing);
           

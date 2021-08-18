@@ -206,9 +206,9 @@ for m=1:p
     Data_phase = angle(data);
     [v_x,v_y,v_z]=vepc_calc(Data_phase,Data_magnitude);
     
-    Data_magnitude=cat(3,Data_magnitude(:,:,1:2),Data_magnitude);
+    %Data_magnitude=cat(3,Data_magnitude(:,:,1:2),Data_magnitude);
     
-    data=cat(4,v_x,v_y,v_z,Data_magnitude);
+    data=flip(cat(4,v_x,v_y,v_z,Data_magnitude),1);
     
     %plot
     [Vx,Vy,Vz,M]=vepc_plot(data,raw(files),suffix,files);
